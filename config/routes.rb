@@ -16,6 +16,9 @@ Rails.application.routes.draw do
    get  '/users/:id(.:format)', to: 'show#users_path(users_path)'
    post '/users(.:format)', to: 'users#create'
    post 'signup', to: 'users#create'
+   get    '/login',   to: 'sessions#new'
+   post   '/login',   to: 'sessions#create'
+   delete '/logout',  to: 'sessions#destroy'   
    resources :users
 
  resources :food_items
