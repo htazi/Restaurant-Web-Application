@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  size: MyString
-  price: 9.99
-  category_name: MyString
+  size: 1
+  price: 1.5
+  category_id: MyString
 
 two:
   name: MyString
-  size: MyString
-  price: 9.99
-  category_name: MyString
+  size: 1
+  price: 1.5
+  category_id: MyString
