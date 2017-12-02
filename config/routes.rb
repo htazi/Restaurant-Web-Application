@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  
+
   #get 'sessions/new'
   get '/login',        to: 'sessions#new'
   post '/login',       to: 'sessions#create'
@@ -13,11 +15,13 @@ Rails.application.routes.draw do
  
   resources :users
 
-  #get 'categories/index'
-  #get 'restaurant_web/home'
+  #get 'fooditems/index'
+  get  '/show', to: 'food_items#index'
+  
+  #get 'restaurant_web/ home'
+    
 
    root 'restaurant_web#home'
-   #get  '/login',    to: 'restaurant_web#login'
    get  '/contact', to: 'restaurant_web#contact'
    get  '/menu', to: 'catefories#index'
   
