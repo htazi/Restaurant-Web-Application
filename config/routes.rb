@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   
+<<<<<<< HEAD
   
 
+=======
+  resources :food_items
+  resources :categories
+>>>>>>> e7c3b44625529f14768c11807ba2eb1e45c719c1
   #get 'sessions/new'
   get '/login',        to: 'sessions#new'
   post '/login',       to: 'sessions#create'

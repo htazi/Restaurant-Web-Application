@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Category name:</strong>
-  <%= @food_item.category_name %>
+  <strong>Category:</strong>
+  <%= link_to @food_item.category.name, @food_item.category %>
 </p>
 
 <%= link_to 'Edit', edit_food_item_path(@food_item) %> |
