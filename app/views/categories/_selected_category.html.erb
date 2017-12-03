@@ -1,0 +1,9 @@
+<table>
+    <strong>Displaying: <%= category.name %></strong>
+    <% category.food_items.each do |food_item| %>
+      <tr>
+        <td><%= link_to food_item.name, food_item %></td>
+        <td>$<%= food_item.price %></td>
+      </tr>
+    <% end %>
+</table>

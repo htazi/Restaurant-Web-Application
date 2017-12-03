@@ -61,6 +61,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def selected_category
+    @category = Category.find(params[:id])
+    render 'selected_category.js.erb'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category

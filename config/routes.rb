@@ -18,16 +18,15 @@ Rails.application.routes.draw do
   #get 'categories/index'
   #get 'restaurant_web/home'
 
-   root 'restaurant_web#home'
-   #get  '/login',    to: 'restaurant_web#login'
-   get  '/contact', to: 'restaurant_web#contact'
-   get  '/menu', to: 'catefories#index'
+  root 'restaurant_web#home'
+  #get  '/login',    to: 'restaurant_web#login'
+    get  '/contact', to: 'restaurant_web#contact'
+    get  '/menu', to: 'categories#index'
+    
+    get  '/new_food_items', to: 'food_items#new'
+    get  '/go_to_food_items', to: 'food_items#index'
   
-
- resources :food_items
- resources :categories
- #root 'categories#index'
- 
+    get '/selected_category', to: 'categories#selected_category'
  
  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

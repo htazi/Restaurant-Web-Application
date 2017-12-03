@@ -1,7 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Food Items</h1>
-
+<table>
+  <thead>
+    <tr>
+      <th>Manage Food Items<th></t>
+    </tr>
+    <tr>
+      <th><%= link_to 'New Category', new_category_path %><th>
+    </tr>
+    <tr>
+      <th><%= link_to 'New Food Item', new_food_item_path %><th>
+    </tr>
+  </thead>
+</table>
+      
 <table>
   <thead>
     <tr>
@@ -28,6 +40,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Food Item', new_food_item_path %>
+<%= link_to "Go to Categories Page", menu_path, class: "btn btn-sm btn-primary" %>
