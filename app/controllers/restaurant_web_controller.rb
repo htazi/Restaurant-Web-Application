@@ -1,4 +1,5 @@
 class RestaurantWebController < ApplicationController
+  
   def home
   end
 
