@@ -1,0 +1,18 @@
+<table>
+
+    <strong>You have selected the following iems</strong>
+
+    <% @category.food_items.each do |food_item| %>
+
+      <tr>
+
+        <td><%= link_to food_item.name, create_order_path %></td>
+
+        <td>$<%= food_item.price %></td>
+
+      </tr>
+
+    <% end %>
+
+</table>
+<%= link_to 'Back', categories_path, class: 'btn btn-primary'%>
