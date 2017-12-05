@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:index,:show,:edit, :update]
-  before_action :correct_user,   only: [:show,:edit, :update]
+  #before_action :correct_user,   only: [:show, :edit,:update]
+ 
   # GET /categories
   # GET /categories.json
   def index
@@ -10,6 +11,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1
   # GET /categories/1.json
+  
   def show
   end
 
@@ -82,7 +84,7 @@ class CategoriesController < ApplicationController
 
       unless logged_in?
 
-        store_location
+       store_location
 
         flash[:danger] = "Please log in."
 

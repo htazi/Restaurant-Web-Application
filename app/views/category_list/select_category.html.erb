@@ -1,0 +1,28 @@
+<% provide(:title, "Menu") %>
+
+<p id="notice"><%= notice %></p>
+
+
+
+<h1>Menu</h1>
+
+<div class="button-container">
+
+  <div class="row">
+
+    <% @categories.each do |category| %>
+
+      <td id = '<%= category.id %>'>
+
+        <span class = 'category-button'>
+
+          <%= link_to category.name, list_path(category, :id => category.id), remote: false, class: "btn btn-lg btn-primary" %>
+
+        </spa>
+
+      </td>
+
+    <% end %>
+    <br>
+    <br>
+    <%= link_to "Add Category", add_category_path, class: "btn btn-primary" %>

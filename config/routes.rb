@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :food_items
   resources :categories
+  
   #get 'sessions/new'
   get '/login',        to: 'sessions#new'
   post '/login',       to: 'sessions#create'
@@ -24,12 +25,13 @@ Rails.application.routes.draw do
 
    root 'restaurant_web#home'
    get  '/contact', to: 'restaurant_web#contact'
-   get  '/menu', to: 'categories#index'
+   get  '/menu', to: 'category_list#select_category'
+   get  '/add_category', to: 'categories#index'
    get  '/new_food_items', to: 'food_items#new'
    get  '/go_to_food_items', to: 'food_items#index'
-   get '/selected_category', to: 'categories#selected_category'
-   get '/list', to: 'category_list#list'
-   get '/create_order', to: 'category_list#create_order'
+   get  '/selected_category', to: 'categories#selected_category'
+   get  '/list', to: 'category_list#list'
+   get  '/create_order', to: 'category_list#create_order'
    
    
 
