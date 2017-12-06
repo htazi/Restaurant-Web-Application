@@ -6,7 +6,7 @@
 
       <tr>
 
-        <td><%= link_to food_item.name, create_order_path %></td>
+        <td><%= link_to food_item.name, create_order_path(@category, :id => @category.id)%></td>
 
         <td>$<%= food_item.price %></td>
 
