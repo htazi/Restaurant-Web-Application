@@ -16,13 +16,27 @@
 
         <span class = 'category-button'>
 
-          <%= link_to category.name, list_path(category, :id => category.id), remote: false, class: "btn btn-lg btn-primary" %>
+          <%= link_to category.name, selected_category_path(category, :id => category.id), remote: true, class: "btn btn-lg btn-primary" %>
 
         </spa>
 
       </td>
 
     <% end %>
-    <br>
-    <br>
-    <%= link_to "Add Category", add_category_path, class: "btn btn-primary" %>
+    
+  </div>
+  
+</div>
+
+
+<section id="foods-section">
+
+  <div id="foods">
+
+  </div>
+
+</section>
+
+<br>
+<br>
+<%= link_to "Manage Menu", add_category_path, class: "btn btn-primary" %>

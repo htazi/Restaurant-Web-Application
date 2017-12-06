@@ -11,4 +11,9 @@ class CategoryListController < ApplicationController
   def select_category
     @categories = Category.all
   end
+  
+  def selected_category
+    @category = Category.find(params[:id])
+    render 'selected_category.js.erb'
+  end
 end

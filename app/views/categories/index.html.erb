@@ -6,95 +6,59 @@
 
 <h1>Menu</h1>
 
-<div class="button-container">
 
-  <div class="row">
+<table>
 
+  <thead>
+
+    <tr>
+
+      <th>Manage Categories<th></t>
+
+      <th colspan="3"></th>
+
+    </tr>
+
+    <tr>
+
+      <th><%= link_to 'New Category', new_category_path, class: "btn btn-sm btn-primary"  %><th>
+
+    </tr>
+
+    <tr>
+
+      <th><%= link_to 'New Item', new_food_item_path, class: "btn btn-sm btn-primary"  %><th>
+
+    </tr>
+
+  </thead>
+
+<table class = "table tabel-striped">
+  <thead class = "thead thead-default">
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Amount of Items</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
     <% @categories.each do |category| %>
-
-      <td id = '<%= category.id %>'>
-
-        <span class = 'category-button'>
-
-          <%= link_to category.name, list_path(category, :id => category.id), remote: false, class: "btn btn-lg btn-primary" %>
-
-        </spa>
-
-      </td>
-
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.id %></td>
+        <td><%= category.food_items.size %></td>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
     <% end %>
+  </tbody>
+</table>
 
-  </div>
-
-</div>
-
+<%= link_to "Go to Foods Page", go_to_food_items_path, class: "btn btn btn-primary" %>
 <br>
+<br>
+<%= link_to "Return to Menu", menu_path, class: "btn btn btn-primary" %>
 
-
-<section id="foods-section">
-
-  <div id="foods">
-
-  </div>
-
-</section>
-
-
-
-
-
-<div class="manager">
-
-  <table>
-
-    <thead>
-
-      <tr>
-
-        <th>Manage Categories<th></t>
-
-        <th colspan="3"></th>
-
-      </tr>
-
-      <tr>
-
-        <th><%= link_to 'New Category', new_category_path %><th>
-
-      </tr>
-
-      <tr>
-
-        <th><%= link_to 'New Item', new_food_item_path %><th>
-
-      </tr>
-
-    </thead>
-
-    
-
-    <tbody>
-
-      <% @categories.each do |category| %>
-
-        <tr>
-
-          <td><%= category.name %></td>
-
-          <td><%= link_to 'Show', category %></td>
-
-          <td><%= link_to 'Edit', edit_category_path(category) %></td>
-
-          <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-        </tr>
-
-      <% end %>
-
-    </tbody>
-
-  </table>
-
-  <%= link_to "Go to Foods Page", go_to_food_items_path, class: "btn btn-sm btn-primary" %>
-
-</div>

@@ -63,11 +63,6 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  #def selected_category
-    #@category = Category.find(params[:id])
-    #render 'selected_category.html.erb'
-  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.

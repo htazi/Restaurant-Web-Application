@@ -29,7 +29,8 @@ Rails.application.routes.draw do
    get  '/add_category', to: 'categories#index'
    get  '/new_food_items', to: 'food_items#new'
    get  '/go_to_food_items', to: 'food_items#index'
-   get  '/selected_category', to: 'categories#selected_category'
+   get  '/go_to_categories', to: 'categories#index'
+   get '/selected_category', to: 'category_list#selected_category'
    get  '/list', to: 'category_list#list'
    get  '/create_order', to: 'category_list#create_order'
    

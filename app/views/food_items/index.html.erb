@@ -8,10 +8,10 @@
       <th>Manage Food Items<th></t>
     </tr>
     <tr>
-      <th><%= link_to 'New Category', new_category_path %><th>
+      <th><%= link_to 'New Category', new_category_path, class: "btn btn-sm btn-primary"  %><th>
     </tr>
     <tr>
-      <th><%= link_to 'New Food Item', new_food_item_path %><th>
+      <th><%= link_to 'New Food Item', new_food_item_path, class: "btn btn-sm btn-primary"  %><th>
     </tr>
   </thead>
 </table>
@@ -44,4 +44,7 @@
 
 <br>
 
-<%= link_to "Go to Categories Page", menu_path, class: "btn btn-sm btn-primary" %>
+<%= link_to "Go to Categories Page", go_to_categories_path, class: "btn btn btn-primary" %>
+<br>
+<br>
+<%= link_to "Return to Menu", menu_path, class: "btn btn btn-primary" %>

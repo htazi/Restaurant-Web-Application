@@ -1,0 +1,2 @@
+$('#foods').html('');
+$("#foods").append("<%= escape_javascript("#{render :partial => 'category_list/selected_category', :locals => {:category => @category }}").html_safe %>");
